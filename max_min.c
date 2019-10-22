@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 void gl(int x,int y,int z)
 {
 	int g,l;
@@ -25,13 +24,26 @@ void gl(int x,int y,int z)
 	else if(z>x && z>y)
 	g=z;
 	printf("\nGreatest and lowest number are %d,%d",g,l);	
-	}	
+	}
+void max(int a,int b,int c)
+{
+	if(a>b)
+	{
+		if(a>c)
+			return a;
+	}
+	else if(b>c)
+		return b;
+	else
+		return c;
+		
 
-main()
+int main()
 {
 	int a,b,c;
 	printf("Enter three number : ");
 	scanf("%d%d%d",&a,&b,&c);
 	gl(a,b,c);
-	getch();
+	printf("%d",max(a,b,c));
+	return 0;
 }
